@@ -1,0 +1,19 @@
+{
+    "contextFileName": [
+        "GEMINI.md",
+        "AGENT.md",
+        "SYSTEM.md"
+    ],
+    "hideBanner": true,
+    "hideTips": false,
+    "excludedProjectEnvVars": [
+        "DEBUG",
+        "DEBUG_MODE",
+        "NODE_ENV"
+    ],
+    "maxSessionTurns": 100,
+    "selectedAuthType": "oauth-personal",
+    "theme": "Default",
+    "preferredEditor": "vscode",
+    "mcpServers": {},
+}
