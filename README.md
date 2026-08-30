@@ -15,10 +15,8 @@ A centralized repository of system rules, modular skills, and directives designe
 │   └── self-reviewer.md     # Enforces plan confirmation gates & no-guessing
 ├── skills/                  # Modular skill packages
 │   ├── devrel/              # Developer advocacy and technical evangelism skills
-│   │   ├── content-generator/# High-impact technical content generator for DevRel
-│   │   └── content-reviewer/# Multi-modal review for developer advocacy content
-│   ├── engineering/         # Software design, building, and deployment skills
-│   ├── in-progress/         # Pre-release skills undergoing testing
+│   │   ├── devrel-content-generator/# High-impact technical content generator for DevRel
+│   │   └── devrel-content-reviewer/# Multi-modal review for developer advocacy content
 │   └── retired/             # Deprecated or legacy skills
 ├── AGENTS.md                # System rules & skill installation protocols
 ├── CLAUDE.md                # Pointer to AGENTS.md
@@ -45,12 +43,10 @@ Skills in `skills/` are on-demand capabilities packaged with a `SKILL.md` instru
 
 | Skill | Bucket | Description |
 | :--- | :--- | :--- |
-| **`content-generator`** | `devrel` | Crafts energetic, tech-savvy conference proposals, blog outlines, video/podcast scripts, and Nano Banana 2 image prompts featuring Google Cloud platforms. |
-| **`content-reviewer`** | `devrel` | Multi-modal review tool for developer advocacy content (text, images, videos, audio, web) enforcing grammar, pronoun consistency, logical flow, title clarity, audience depth, runnable code, and actionable conclusions. |
+| **`devrel-content-generator`** | `devrel` | Crafts energetic, tech-savvy conference proposals, blog outlines, video/podcast scripts, and Nano Banana 2 image prompts featuring Google Cloud platforms. |
+| **`devrel-content-reviewer`** | `devrel` | Multi-modal review tool for developer advocacy content (text, images, videos, audio, web) enforcing grammar, pronoun consistency, logical flow, title clarity, audience depth, runnable code, and actionable conclusions. |
 
 ---
-
-## 🚀 Setup & Usage
 
 Antigravity and Gemini agents automatically discover and load rules and skills:
 
@@ -76,12 +72,10 @@ Follow the extraction protocols in [`AGENTS.md`](./AGENTS.md) to install individ
 
 ```bash
 # Using npx degit to install a single skill
-npx degit <owner>/<repo>/skills/devrel/content-generator .agents/skills/content-generator
+npx degit <owner>/<repo>/skills/devrel/devrel-content-generator .agents/skills/devrel-content-generator
 ```
 
 ---
-
-### 2. Global Scope (Available in All Workspaces)
 
 To make skills available machine-wide across all Antigravity sessions:
 
@@ -93,24 +87,20 @@ Add the repository path to `~/.gemini/config/skills.json`:
   "entries": [
     {
       "path": "/path/to/this-repo/skills/devrel",
-      "include_only": ["content-generator", "content-reviewer"]
+      "include_only": ["devrel-content-generator", "devrel-content-reviewer"]
     }
   ]
 }
 ```
 
-**Option B: Symlink / Copy to Global Skills Folder**  
-
 ```bash
 mkdir -p ~/.gemini/config/skills
-ln -s /path/to/this-repo/skills/devrel/content-generator ~/.gemini/config/skills/content-generator
+ln -s /path/to/this-repo/skills/devrel/devrel-content-generator ~/.gemini/config/skills/devrel-content-generator
 ```
 
 ---
 
 ## 🔌 Installing & Distributing via Plugins
-
-When distributing a comprehensive suite of skills, rules, and tool configurations to a team, packaging them as an **Antigravity Plugin** is the recommended approach.
 
 ### Why Use a Plugin?
 
@@ -129,8 +119,8 @@ my-custom-plugin/
 │   ├── matter-of-fact.md
 │   └── self-reviewer.md
 ├── skills/             # Bundled skills
-│   ├── content-generator/
-│   └── content-reviewer/
+│   ├── devrel-content-generator/
+│   └── devrel-content-reviewer/
 └── mcp_config.json     # Optional MCP server definitions
 ```
 
@@ -138,8 +128,6 @@ Sample `plugin.json`:
 
 ```json
 {
-  "name": "devrel-agent-toolkit",
-  "description": "System rules for matter-of-fact interaction and DevRel content workflows."
 }
 ```
 

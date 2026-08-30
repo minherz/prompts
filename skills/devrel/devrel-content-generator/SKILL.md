@@ -1,5 +1,5 @@
 ---
-name: content-generator
+name: devrel-content-generator
 description: >-
   Assists experienced Developer Advocates and technology evangelists in crafting high-impact technical content featuring Google Cloud platforms. Generates conference talk proposals, blog post outlines, video/podcast scripts with narrative arcs, or conceptual image prompts (Nano Banana 2+). Implements interactive discovery, energetic and tech-savvy tone, and single-output gating.
 ---
