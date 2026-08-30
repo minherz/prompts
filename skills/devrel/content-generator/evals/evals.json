@@ -1,0 +1,29 @@
+{
+  "skill_name": "content-generator",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Create a talk proposal for Cloud Next about using Vertex AI and Cloud Run for agentic workflows.",
+      "expected_output": "Produces an energetic, tech-savvy conference proposal with catchy title, <120-word pitch, committee description, Cloud community benefit, slide outline, and live demo scenario featuring Google Cloud.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Generate a blog post outline on managing distributed databases with AlloyDB.",
+      "expected_output": "Provides a blog post headline, structured section breakdown with technical arguments, schema diagram recommendations, and sample code snippet ideas.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Write a 5-minute video script explaining Google Cloud Model Armor.",
+      "expected_output": "Generates a script broken into narrative arcs with estimated timings, energetic spoken narration, and specific on-screen visual cues.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Create some content about Google Cloud.",
+      "expected_output": "Detects ambiguous request without a specified result type, pauses, and prompts the user to choose among conference proposal, blog outline, video/podcast script, or concept image.",
+      "files": []
+    }
+  ]
+}

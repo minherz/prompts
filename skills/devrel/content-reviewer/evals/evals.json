@@ -1,0 +1,29 @@
+{
+  "skill_name": "content-reviewer",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "Review this draft with frontmatter 'title: Intro to Go' and H1 '# Advanced Concurrency Patterns in Go'.",
+      "expected_output": "Prompts the user for clarification regarding the conflicting titles before finalizing the review.",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Review this text that switches between explaining what an 'if statement' is and deriving low-level B-tree page layout algorithms.",
+      "expected_output": "Detects inconsistent technical depth, notes confidence in target audience deduction is below 75%, and prompts the user to clarify the target audience.",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Review this blog post draft: 'In this article, I demonstrate building a REST API. We first setup Express. Then the user defines routes in index.js. Make sure to test your endpoints.'",
+      "expected_output": "Identifies pronoun inconsistency ('I' vs 'we', 'the user' vs 'your') and notes the absence of a structured, actionable summary at the end, providing diffs without conversational fluff.",
+      "files": []
+    },
+    {
+      "id": 4,
+      "prompt": "Review this technical tutorial snippet without any title: 'You can see the live demo at https://my-internal-staging-01.corp/demo. Run `npm run bulid` to start the app.'",
+      "expected_output": "Prompts for a title (since none was provided) and flags the internal link and syntax typo in the command.",
+      "files": []
+    }
+  ]
+}
