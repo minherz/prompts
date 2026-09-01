@@ -25,21 +25,25 @@ Modular skills in this repository are categorized into domain bucket folders und
 When adding or installing a skill from an external GitHub repository into this workspace, follow these protocols:
 
 ### A. Bucket Selection
+
 - Identify the appropriate category bucket (`devrel/`, `engineering/`, `in-progress/`) based on the skill's purpose.
 - Target directory path: `skills/<bucket>/<skill-name>/`
 
 ### B. Single-Skill Extraction Mandate (No Whole-Repo Bloat)
+
 - If the source GitHub repository contains multiple skills or is a monorepo, **DO NOT** clone the entire repository into the bucket.
 - Extract **only** the target skill directory.
 
 ### C. Recommended Installation Commands
 
 #### Option A: `npx degit` (Fastest for subdirectories)
+
 ```bash
 npx degit <owner>/<repo>/path/to/skill-folder skills/<bucket>/<skill-name>
 ```
 
 #### Option B: `curl` + `tar` (Zero-dependency extraction)
+
 ```bash
 mkdir -p skills/<bucket>/<skill-name>
 curl -sL "https://github.com/<owner>/<repo>/tarball/<branch>" \
@@ -47,6 +51,7 @@ curl -sL "https://github.com/<owner>/<repo>/tarball/<branch>" \
 ```
 
 #### Option C: `git clone` or Git Submodule (For dedicated single-skill repos)
+
 ```bash
 # Direct clone:
 git clone https://github.com/<owner>/<repo>.git skills/<bucket>/<skill-name>
@@ -62,11 +67,14 @@ git submodule add https://github.com/<owner>/<repo>.git skills/<bucket>/<skill-n
 After extracting or cloning a skill:
 
 1. **Verify Location**: Ensure `SKILL.md` resides directly at `skills/<bucket>/<skill-name>/SKILL.md` (no extra nested directory layers).
-2. **Validate YAML Frontmatter**: Confirm `SKILL.md` starts with valid YAML frontmatter containing `name` and `description` fields:
+2. **Validate YAML Frontmatter**: Confirm `SKILL.md` starts with valid YAML frontmatter containing `name`, `version`, and `description` fields:
+
    ```markdown
    ---
    name: <skill-name>
+   version: 1.0.0
    description: <Clear description of what the skill does and when to trigger it>
    ---
    ```
+
 3. **Clean Up**: Remove any unnecessary temporary files or extraneous repository files.

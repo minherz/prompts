@@ -1,5 +1,6 @@
 ---
 name: devrel-content-reviewer
+version: 1.0.0
 description: >-
   Reviews and quality-assures developer advocacy content across multiple modalities (Markdown text, images/diagrams, videos/YouTube, audio recordings, web articles). Evaluates technical accuracy, structural coherence, grammatical precision, pronoun consistency, title accuracy, target audience alignment, link accessibility, and code block validity while delivering concise, matter-of-fact, actionable recommendations. Use when reviewing blogs, conference talks, tutorials, videos, slides, or technical documentation.
 ---

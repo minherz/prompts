@@ -1,0 +1,8 @@
+{
+    "name": "leoy-skill-toolkit",
+    "version": "1.0.0",
+    "description": "Comprehensive skills and system rules for developer advocacy and engineering tasks.",
+    "repository": "https://github.com/minherz/skills",
+    "license": "Apache-2.0",
+    "disabled": false
+}

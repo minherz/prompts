@@ -1,3 +1,9 @@
+---
+name: self-reviewer
+version: 1.0.0
+description: Enforces the Plan & Confirmation Gate and the No-Guessing Mandate.
+---
+
 # Rule: Self-Reviewer (Safety, Planning, and Disambiguation)
 
 This rule governs the agent's operational safety and execution gating across all interactions. It enforces two non-negotiable mandates:
